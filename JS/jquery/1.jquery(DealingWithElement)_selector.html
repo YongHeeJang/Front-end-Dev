@@ -1,0 +1,29 @@
+<body>
+    <h1>title</h1>
+    <p class="test">paragraph</p>
+    <p id="only">paragraph</p>
+    
+    <!-- jquery를 사용하기 위해선, https://releases.jquery.com/에서 jquery link를 copy해서 삽입해야 한다;
+    link는 head 또는 body 아무 곳에 삽입해도 된다; -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+
+    // Import element using jquery : $('selector')
+
+        // jquery에서는 $(document).ready(function(){}을 사용해서, jquery 구문들을 이 {}안(함수)에 포함시켜준다;
+        // '$(document).ready(function(){}' 가 의미하는 것은, html문서의 로딩이 다 끝나고 나서, 함수들(jquery구문)을 적용하겠다는 뜻이다.
+        // html 문서를 다 읽어오기 전에 jquery구문이 시작되어, jquery구문이 html 문서를 읽지 못하는 오류를 막기 위함이다; 
+        $(document).ready(function(){
+
+            // jquery에서 사용하는 selector는, css와 동일;
+            let $pElements = $("h1");
+            let $testClass = $(".test");
+            let $onlyId = $("#only");
+
+            // selector 혼합(자손, 자식);
+            let $gChild = $("div p");
+            let $child = $("div > p");
+        });
+    </script>
+</body>
+

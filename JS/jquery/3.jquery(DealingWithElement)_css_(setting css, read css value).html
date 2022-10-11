@@ -1,0 +1,26 @@
+<body>
+    <div>Grandparent</div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            let divElements = $("div");
+            
+            // css setting(only one css);
+            divElements.css("color", "red");
+
+            // css setting(multiple css) : 객체 형태로 여러개의 css 설정;
+            divElements.css({
+                "background-color": "blue",
+                "font-size": "20px"
+            });
+            divElements.css("font-family", "Arial");
+
+            // read css value;
+            console.log(divElements.css("color"));
+
+            // read multiple css values : 배열 형태로 각각의 css value 읽기;
+            console.log(divElements.css(["color", "font-size"]))
+        });
+    </script>
+</body>
+

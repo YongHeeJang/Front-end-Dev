@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>3</h1>
+    <div class="parent"></div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        
+        //code를 작성할 때는, 기능별로 '함수화'하여 작성하는 것이 좋다.
+        // 함수화하여 coding하는 것을 습관화!;
+        
+        // isEven function : 짝수면 true 반환;
+        function isEven(value){
+            return value % 2 == 0
+        }
+        
+        // writeEven function : 짝수면, element에 '짝수'라고 content 입력, vise versa;
+        function writeEven(num, elem){
+            if(isEven(num)){
+                elem.html('짝수')
+            }else{
+                elem.html('홀수')
+            }
+        }
+
+        // JavaScript 에서 init 이라는 내장함수는 없음. 
+        // 사용자가 그냥 임의로 이름을 지어 만드는 것이 init 이라는 이름을 짓게 되는것.
+        // init 이라는 이름은 보통 초기화 의 의미를 지닌 함수나 객체를 작성할 때 많이 사용.;
+        function init(){
+            let h1Num = parseInt($('h1').html())
+            let div = $('.parent')
+            writeEven(h1Num, div)
+        }
+
+        init()
+       
+    </script>
+</body>
+</html>

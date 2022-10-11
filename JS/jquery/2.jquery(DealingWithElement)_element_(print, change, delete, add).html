@@ -1,0 +1,26 @@
+<body>
+    <div>1</div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+            // element 불러와서 변수에 할당;
+            let divElements = $("div");
+
+            // 변수에 할당된 element 출력;
+            console.log(divElements.html());
+
+            // element의 content만 delete;
+            divElements.empty();
+            
+            // element 전체를 delete;
+            divElements.remove();
+            
+            // element에 하위 element 추가;
+            divElements.append("<p>Hello World</p>");  
+
+        });
+
+    </script>
+</body>
+
